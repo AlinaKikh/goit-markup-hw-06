@@ -850,7 +850,6 @@ img {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .checkbox-input:checked + .modal-checkbox-label > .modal-accept {
   border: none;
   fill: #f4f4fd;
@@ -885,4 +884,51 @@ img {
 .send-button:focus,
 .send-button:active {
   background-color: #404bbf;
+}
+
+@media (max-width: 1158px) {
+  .address-box {
+    display: column;
+    gap: 12px;
+  }
+  .main-container {
+    max-width: 100%;
+  }
+  .features-container {
+    flex-wrap: wrap;
+  }
+
+  .icon-container {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .team-icon-container {
+    flex-basis: calc((100% - 48px) / 2);
+  }
+  .footer-blocks {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:768px) {
+
+}
+
+@media (min-resolution: 192px) {
+  .container {
+    background-image: url(../images/people-office-12@2x.jpg);
+  }
 }
