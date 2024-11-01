@@ -34,8 +34,18 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
-/* Header */
+
+.container {
+  width: 100%;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* --------------Header---------------- */
 .header {
   box-sizing: border-box;
   border-bottom: 1px solid #e7e9fc;
@@ -46,11 +56,10 @@ img {
   display: flex;
 }
 
-.container {
-  width: 1158px;
-  max-width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
+.header-container {
+  display: flex;
+  align-items: center;
+  height: 72px;
 }
 
 .nav-list {
@@ -80,10 +89,7 @@ img {
 }
 
 .header-features {
-  width: 261px;
-  display: flex;
-  gap: 40px;
-  justify-content: space-between;
+  display: none;
 }
 
 .header-features-list {
@@ -125,22 +131,8 @@ img {
   background-color: #404bbf;
 }
 
-.header-container {
-  display: flex;
-  align-items: center;
-  height: 72px;
-}
-
 .address-box {
-  font-style: normal;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
-  color: #434455;
-  display: flex;
-  gap: 40px;
+  display: none;
 }
 
 .address-list {
@@ -172,18 +164,29 @@ img {
   color: #404bbf;
 }
 
-/* Main - section 1*/
+.header-menu {
+  color: #434455;
+  cursor: pointer;
+}
+
+.header-menu:hover,
+.header-menu:focus,
+.header-menu:active {
+  color: #404bbf;
+}
+
+/* ---------Main - section 1--------------*/
 .main-container {
   margin: 0 auto;
-  height: 600px;
+  height: 432px;
   display: block;
   flex-direction: column;
-  padding: 188px 0;
+  padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office-12.jpg);
+    url(../images/people-office-13.jpg);
   background-repeat: no-repeat;
   max-width: 1440px;
   background-position: center;
@@ -193,12 +196,13 @@ img {
 .main-title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 107%;
+  font-size: 36px;
+  line-height: 111%;
   letter-spacing: 0.02em;
   color: #fff;
-  max-width: 496px;
+  max-width: 216px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .main-button {
@@ -224,20 +228,25 @@ img {
   background: #404bbf;
 }
 
-/* Features - section 2 */
-.features-section {
-  padding: 120px 0;
-}
-
+/* ----------Features - section 2------------ */
 .features-container {
   display: flex;
-  gap: 24px;
+  gap: 72px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 96px 8px;
 }
 
 .features-box {
   margin: 0;
-  width: 264px;
-  height: 98px;
+  max-width: 288px;
+}
+
+.icon-clock,
+.icon-diagram,
+.icon-antena,
+.icon-astronaut {
+  display: none;
 }
 
 .visually-hidden {
@@ -255,16 +264,18 @@ img {
 
 .features-title {
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 36px;
   line-height: 120%;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  text-align: center;
+  padding-bottom: 8px;
 }
 
 .features-description {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
@@ -272,28 +283,20 @@ img {
 }
 
 .icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  width: 264px;
-  height: 112px;
-  background: #f4f4fd;
-  padding: 24px 100px;
-  margin-bottom: 8px;
+  display: none;
 }
 
 .features-icon > svg {
   margin: auto;
 }
 
-/* Team - section 3 */
+/* -------------Team - section 3--------------*/
 .team-container {
   background-color: #f4f4fd;
-  height: 780px;
-  padding: 120px 0;
-  margin-top: 120px;
+  /* height: 780px; */
+  /* padding: 120px 0; */
+  padding: 96px 0;
+  /* margin-top: 120px; */
 }
 
 .team-title {
@@ -310,8 +313,10 @@ img {
 
 .wrapper {
   display: flex;
-  gap: 24px;
-  flex-basis: calc((100% - 3 * 24px) / 4);
+  gap: 72px;
+  flex-wrap: wrap;
+  /* flex-basis: calc((100% - 3 * 24px) / 4); */
+  justify-content: center;
 }
 
 .team-item {
@@ -383,11 +388,11 @@ img {
   text-align: center;
 }
 
-/* Portfolio - section 4 */
+/* ---------Portfolio - section 4------------- */
 
 .portfolio-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .portfolio-container {
   background-color: #fff;
@@ -407,13 +412,17 @@ img {
 
 .portfolio-box {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 24px;
+  column-gap: 48px;
   align-content: normal;
+  justify-content: center;
 }
 
 .portfolio-item {
+  max-width: 288px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -478,24 +487,22 @@ img {
   padding-top: 8px;
 }
 
-/* Footer */
+/* ------------------Footer---------------------- */
 .footer-container {
   background-color: #2e2f42;
-  height: 312px;
-  padding: 100px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.conclusion-container {
-  margin-right: 120px;
+  padding: 96px 0px;
 }
 
 .footer-blocks {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
 }
 
 .logo-third {
@@ -527,11 +534,16 @@ img {
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  width: 264px;
+  /* width: 264px; */
+  max-width: 288px;
+  width: 100%;
 }
 
 .social-media-container {
-  width: 208px;
+  max-width: 208px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .social-media-title {
@@ -541,9 +553,10 @@ img {
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #fff;
-  margin-bottom: 16px;
+  margin: 72px auto 16px;
 }
 
+/* ---------------Footer icons-------------- */
 .footer-icon-container {
   display: flex;
   gap: 16px;
@@ -577,17 +590,18 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Subscribe */
+/* -------------Subscribe--------------- */
 .subscribe-container {
-  width: 453px;
-  height: 80px;
-  margin-left: 80px;
+  max-width: 288px;
+  width: 100%;
+  margin-top: 72px;
 }
 
 .subscribe-form {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -597,8 +611,8 @@ img {
 
 .subscribe-input {
   display: flex;
-  flex-direction: row;
   gap: 24px;
+  margin: 0 auto;
 }
 
 .subscribe-label {
@@ -610,6 +624,7 @@ img {
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
+  align-items: center;
 }
 
 .subscribe-icon {
@@ -635,13 +650,14 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .subscribe-input-email {
   border: 1px solid #fff;
   background-color: transparent;
   border-radius: 4px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding-left: 16px;
@@ -650,6 +666,7 @@ img {
   line-height: 200%;
   letter-spacing: 0.04em;
   color: #fff;
+  opacity: 0.3;
 }
 
 .subscribe-input-email::placeholder {
@@ -660,7 +677,7 @@ img {
   color: #fff;
 }
 
-/* Modal window */
+/* ---------------Modal overlay--------------- */
 .modal-overlay {
   background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
@@ -688,17 +705,19 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
+  /* width: 408px; */
   min-height: 584px;
+  max-width: 288px;
+  width: 100%;
   background-color: #fcfcfc;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 16px 16px;
 }
 
-/* Exit-button */
+/* -------------Exit-button--------------- */
 .exit-button {
   position: absolute;
   right: 24px;
@@ -736,7 +755,7 @@ img {
   fill: #ffffff;
 }
 
-/* Inputs */
+/* ----------------Inputs--------------- */
 .modal-title {
   font-weight: 500;
   font-size: 16px;
@@ -827,7 +846,6 @@ img {
 }
 
 .modal-checkbox-label {
-  margin-top: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -849,7 +867,6 @@ img {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .checkbox-input:checked + .modal-checkbox-label > .modal-accept {
   border: none;
@@ -885,4 +902,422 @@ img {
 .send-button:focus,
 .send-button:active {
   background-color: #404bbf;
+}
+
+/* -----------Modal menu---------- */
+.modal-overlay-menu {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-menu {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-100%, -100%);
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+.menu-features {
+   padding-top: 72px;
+  padding-left: 16px;
+  padding-bottom: 128px;
+}
+
+.menu-features-list {
+  margin-bottom: 40px;
+}
+
+.menu-features-list {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-address-box {
+    padding-left: 16px;
+  padding-bottom: 48px;
+}
+
+.menu-address-list {
+  margin-bottom: 24px;
+}
+
+.menu-address-list {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-address-list:hover {
+  color: #404bbf;
+}
+
+.menu-current {
+  color: #404bbf;
+}
+
+.menu-header-features-list:hover,
+.menu-header-features-list:focus,
+.menu-header-features-list:active {
+  color: #404bbf;
+}
+
+.menu-icon-container {
+  margin-top: 0;
+  display: flex;
+  gap: 40px;
+  flex-basis: calc((100% - 3 * 40px) / 4);
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon-box {
+  width: 40px;
+  height: 40px;
+}
+
+.menu-icon-link {
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-icon-link:hover,
+.menu-icon-link:focus {
+  background-color: #404bbf;
+}
+
+.menu-icon-svg {
+  fill: #f4f4fd;
+}
+
+/* --------------Adaptation--------------------------------- */
+@media (min-resolution: 192dpi) {
+  .main-container {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-13@2x.jpg);
+  }
+}
+
+@media (min-width: 768px) {
+  /* ------------Header------------------ */
+  .header-features {
+    display: inherit;
+    width: 261px;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+  }
+
+  .address-box {
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #434455;
+    gap: 40px;
+    display: inherit;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  /* ----------Main - section 1------------ */
+  .main-container {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-14.jpg);
+    padding: 112px 0;
+    height: 436px;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .main-container {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-14@2x.jpg);
+    }
+  }
+
+  .main-title {
+    font-size: 56px;
+    line-height: 107%;
+    max-width: 496px;
+  }
+
+  /* -----------Features - section 2-------- */
+  .features-container {
+        width: 100%;
+    gap: 63px;
+  }
+
+  .features-box {
+    width: 356px;
+  }
+
+  .features-title {
+    text-align: left;
+  }
+
+  /* -----------Team - section 3------------ */
+  .wrapper {
+    gap: 24px;
+    row-gap: 64px;
+  }
+
+  /* ----------Portfolio - section 4--------- */
+  .portfolio-box {
+    row-gap: 72px;
+  }
+
+  .portfolio-item {
+    max-width: 356px;
+  }
+
+  /* ---------------Footer---------------- */
+  .footer-container {
+    height: 456px;
+    padding: 16px 0;
+  }
+
+  .footer-blocks {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .footer-logo {
+    justify-content: left;
+  }
+
+  .social-media-title {
+    margin-left: 0;
+  }
+  .subscribe-container {
+    max-width: 453px;
+    margin-right: 48px;
+  }
+
+  .subscribe-label {
+    align-items: flex-start;
+  }
+
+  .subscribe-input-email {
+    width: 264px;
+  }
+
+  .modal-overlay-menu {
+    display: none;
+  }
+
+  /* ---------Modal window------------ */
+  .modal {
+    max-width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1157px) {
+  .address-list {
+    font-size: 12px;
+    line-height: 117%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1158px) {
+  .modal-checkbox-label {
+    margin-top: 16px;
+  }
+
+  /* --------------Header--------------- */
+  .address-box {
+    display: flex;
+  }
+
+  .container {
+    max-width: 1158px;
+  }
+
+  /* ----------Main - section 1------------ */
+  .main-container {
+    height: 600px;
+    padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-12.jpg);
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .main-container {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-12@2x.jpg);
+    }
+  }
+
+  /* -----------Features - section 2-------- */
+  .features-section {
+    padding-bottom: 116px;
+  }
+
+  .features-container {
+    display: flex;
+    gap: 24px;
+    flex-wrap: nowrap;
+    padding: 120px 0;
+  }
+
+  .features-box {
+    width: 264px;
+    height: 98px;
+  }
+
+  .features-title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .features-description {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+    padding: 24px 100px;
+    margin-bottom: 8px;
+  }
+
+  .icon-clock,
+  .icon-diagram,
+  .icon-antena,
+  .icon-astronaut {
+    display: flex;
+  }
+
+  /* -----------Team - section 3------------ */
+  .team-container {
+    height: 780px;
+    padding: 120px 0;
+    margin-top: 120px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 3 * 24px) / 4);
+  }
+
+  /* -------Portfolio - section 4----------- */
+  .portfolio-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .portfolio-item {
+    max-width: 360px;
+  }
+
+  .portfolio-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+    align-content: normal;
+  }
+
+  /* ---------------Footer---------------- */
+  .footer-container {
+    height: 312px;
+    padding: 120px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .conclusion-container {
+    margin-right: 120px;
+  }
+
+  .footer-description {
+    max-width: 264px;
+  }
+
+  .subscribe-container {
+    max-width: 453px;
+    height: 80px;
+    margin-left: 80px;
+  }
+
+  .subscribe-input-email {
+    opacity: 1;
+  }
+
+  .subscribe-form {
+    gap: 24px;
+    flex-wrap: nowrap;
+  }
+
+  .subscribe-button {
+    display: flex;
+  }
 }
