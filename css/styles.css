@@ -1192,6 +1192,7 @@ padding-bottom: 40px;
   /* --------------Header--------------- */
   .address-box {
     display: flex;
+    gap: 40px;
   }
 
   .container {
