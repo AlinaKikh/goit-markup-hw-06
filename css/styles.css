@@ -229,16 +229,13 @@ img {
 }
 
 /* ----------Features - section 2------------ */
-.fetures-section {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-
 .features-container {
   display: flex;
   gap: 72px;
   flex-wrap: wrap;
   justify-content: center;
+    padding-top: 96px;
+  padding-bottom: 96px;
   }
 
 .features-box {
@@ -1096,13 +1093,10 @@ padding-bottom: 40px;
   }
 
   /* -----------Features - section 2-------- */
-  .fetures-section {
-  padding-bottom: 72px;
-}
-  
   .features-container {
    width: 100%;
     gap: 72px 24px;
+    padding-bottom: 72px;
   }
 
   .features-box {
